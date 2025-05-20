@@ -5,29 +5,30 @@ interface INavItemProps {
   icon: React.ReactNode
   label: string
   isActive: boolean
-  disabled?: boolean
   onClick: () => void
+  disabled?: boolean
 }
 
 export const NavItem = ({
   icon,
   label,
   isActive,
-  disabled,
   onClick,
+  disabled = false,
 }: INavItemProps) => {
+  const buttonClass = disabled
+    ? styles.disabled
+    : isActive
+      ? styles.active
+      : styles.inactive
+
   return (
-    <button
-      onClick={onClick}
-      className={isActive ? styles.active : styles.inactive}
-      disabled={disabled}
-    >
-      {isActive && <div className={styles.indicator} />}
-      <span className={styles.icon}>{icon}</span>
+    <button className={buttonClass} onClick={onClick} disabled={disabled}>
+      <div className={styles.indicator} />
+      <div className={styles.icon}>{icon}</div>
       <span className={isActive ? styles.labelActive : styles.label}>
         {label}
       </span>
-      {disabled && <div className={styles.disabled} />}
     </button>
   )
 }

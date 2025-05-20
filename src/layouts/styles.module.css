@@ -3,6 +3,11 @@
   height: 100vh;
   background-color: rgb(250, 250, 250);
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .sidebar {
@@ -32,6 +37,7 @@
   margin-left: 0;
   transition: margin-left 0.3s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -45,7 +51,7 @@
   align-items: center;
   justify-content: flex-end;
   padding: 1rem 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 20;
@@ -82,10 +88,11 @@
   background-color: white;
   border-bottom: 1px solid rgb(229, 231, 235);
   padding: 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 20;
-  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -133,6 +140,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding-top: 4rem;
   overflow-y: auto;
 }
 
