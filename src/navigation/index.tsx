@@ -1,13 +1,23 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { AboutUs, Products } from '@pages'
+import { useEffect } from 'react'
 
-export const Navigation = () => {
+interface NavigationProps {
+  setActivePage: (page: string) => void
+}
+
+export const Navigation = ({ setActivePage }: NavigationProps) => {
+  const location = useLocation()
+
+  useEffect(() => {
+    const path = location.pathname.slice(1) || 'Products'
+    setActivePage(path)
+  }, [location.pathname, setActivePage])
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Products />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Products />} />
+      <Route path="/about" element={<AboutUs />} />
+    </Routes>
   )
 }
