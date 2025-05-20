@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { MobileHeader } from './mobileHeader'
-import { Sidebar } from './sidebar'
+import { MobileHeader as MobileHeaderBase } from './mobileHeader'
 import { Crown } from 'lucide-react'
+import { Sidebar } from './sidebar'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -10,18 +10,20 @@ interface LayoutProps {
   setActivePage: (page: string) => void
 }
 
-const Logo = () => (
+const Logo = React.memo(() => (
   <div className={styles.logo}>
     <Crown className={styles.logoIcon} />
     <span className={styles.logoText}>CoffeePoint</span>
   </div>
-)
+))
 
-const Footer = () => (
+const Footer = React.memo(() => (
   <footer className={styles.footer}>
     © {new Date().getFullYear()} CoffeePoint. All rights reserved.
   </footer>
-)
+))
+
+const MobileHeader = React.memo(MobileHeaderBase)
 
 export const Layout = ({
   children,
@@ -30,9 +32,9 @@ export const Layout = ({
 }: LayoutProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+  const toggleMobileMenu = React.useCallback(() => {
+    setIsMobileMenuOpen((prev) => !prev)
+  }, [])
 
   return (
     <div className={styles.container}>

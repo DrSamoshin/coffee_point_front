@@ -154,6 +154,7 @@
 .content {
   flex: 1;
   padding: 1rem;
+  min-height: 300px;
 }
 
 @media (min-width: 640px) {
@@ -169,21 +170,13 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   padding: 1rem;
-  background-color: white;
-  border-top: 1px solid rgb(229, 231, 235);
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
   text-align: center;
   font-size: 0.875rem;
-  color: rgb(107, 114, 128);
-  z-index: 10;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  color: #6b7280;
 }
 
 @media (min-width: 1024px) {
