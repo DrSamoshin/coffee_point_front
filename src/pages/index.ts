@@ -1,2 +1,2 @@
 export * from './aboutUs'
-export * from './catalog'
+export * from './products'
