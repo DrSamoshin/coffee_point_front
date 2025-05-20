@@ -1,0 +1,71 @@
+.header {
+  height: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(82, 82, 82);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(249, 250, 251);
+  color: rgb(220, 38, 38);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.menuButton {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.menuButton:hover {
+  background-color: rgb(243, 244, 246);
+}
+
+.menuIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: rgb(64, 64, 64);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(23, 23, 23);
+}
+
+.logoIcon {
+  height: 1.75rem;
+  width: 1.75rem;
+  color: rgb(146, 71, 21);
+}
