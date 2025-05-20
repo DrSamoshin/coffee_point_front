@@ -1,5 +1,4 @@
-import { Menu, Coffee } from 'lucide-react'
-
+import React from 'react'
 import styles from './styles.module.css'
 
 interface IMobileHeaderProps {
@@ -9,13 +8,13 @@ interface IMobileHeaderProps {
 export const MobileHeader = ({ toggleMenu }: IMobileHeaderProps) => {
   return (
     <div className={styles.header}>
-      <button
-        onClick={toggleMenu}
-        className={styles.menuButton}
-        aria-label="Toggle menu"
-      >
-        <Menu className={styles.menuIcon} />
-      </button>
+      <div className={styles.container}>
+        <button className={styles.menuButton} onClick={toggleMenu}>
+          <div className={styles.menuIcon} />
+          <div className={styles.menuIcon} />
+          <div className={styles.menuIcon} />
+        </button>
+      </div>
     </div>
   )
 }

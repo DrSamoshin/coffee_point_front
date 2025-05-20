@@ -17,6 +17,12 @@ const Logo = () => (
   </div>
 )
 
+const Footer = () => (
+  <footer className={styles.footer}>
+    © {new Date().getFullYear()} CoffeePoint. All rights reserved.
+  </footer>
+)
+
 export const Layout = ({
   children,
   activePage,
@@ -68,6 +74,8 @@ export const Layout = ({
         <main className={styles.main}>
           <div className={styles.content}>{children}</div>
         </main>
+
+        <Footer />
       </div>
     </div>
   )

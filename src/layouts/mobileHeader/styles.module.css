@@ -1,6 +1,6 @@
 .header {
   height: 2rem;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,9 +17,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -28,7 +28,6 @@
 }
 
 .button:hover {
-  background-color: rgb(249, 250, 251);
   color: rgb(220, 38, 38);
 }
 
@@ -38,34 +37,50 @@
 }
 
 .menuButton {
-  padding: 0.5rem;
-  border-radius: 0.375rem;
-}
-
-.menuButton:hover {
-  background-color: rgb(243, 244, 246);
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .menuIcon {
-  height: 1.5rem;
   width: 1.5rem;
-  color: rgb(64, 64, 64);
+  height: 0.125rem;
+  background-color: rgb(64, 64, 64);
+  transition: all 0.2s ease-in-out;
+}
+
+.menuButton:hover .menuIcon {
+  background-color: rgb(220, 38, 38);
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .logoText {
-  margin-right: 0.5rem;
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: rgb(23, 23, 23);
+  letter-spacing: -0.025em;
 }
 
 .logoIcon {
-  height: 1.75rem;
-  width: 1.75rem;
-  color: rgb(146, 71, 21);
+  height: 2rem;
+  width: 2rem;
+  color: rgb(220, 38, 38);
+  transition: transform 0.2s ease-in-out;
+}
+
+.logoContainer:hover .logoIcon {
+  transform: rotate(-15deg);
 }

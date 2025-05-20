@@ -29,30 +29,6 @@
   letter-spacing: 0.05em;
 }
 
-.title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0.25rem;
-  height: 0.25rem;
-  background-color: rgb(220, 38, 38);
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgb(254, 242, 242);
-}
-
-.sparkle {
-  opacity: 0.8;
-  transition: all 0.3s ease;
-  color: rgb(220, 38, 38);
-}
-
-.sparkle:hover {
-  transform: rotate(45deg) scale(1.1);
-  opacity: 1;
-}
-
 .footer {
   margin-top: auto;
   padding: 1rem 1rem 2rem;
